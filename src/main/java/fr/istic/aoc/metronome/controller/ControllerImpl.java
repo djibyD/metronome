@@ -6,7 +6,6 @@ import fr.istic.aoc.metronome.moteur.IMoteur;
 import fr.istic.aoc.metronome.moteur.Moteur;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
@@ -17,32 +16,20 @@ import javafx.scene.shape.Circle;
 public class ControllerImpl implements IController {
 
     //Attributes
-    @FXML
     public Circle ledA;
-    @FXML
     public Circle ledB;
-    @FXML
     public Slider slider;
-    @FXML
-    public TextField label;
-    @FXML
-    public TextField tempParMesure;
-    @FXML
-    public Button inc;
-    @FXML
-    public Button dec;
-
-    //Others attributes
-    private boolean marquerTemps = false;
-    private boolean marquerMesure = false;
-
+    public TextField labelTempo;
+    public TextField labelMesure;
+    public Button incButton;
+    public Button decButton;
 
     //Moteur
     private IMoteur moteur;
     //MediaPlayer
     private MediaPlayer mediaPlayer;
 
-    @FXML
+    //Initialisation
     public void initialize() {
 
         //Initialisation du moteur
@@ -50,14 +37,6 @@ public class ControllerImpl implements IController {
 
         //Initialisation du MediaPlayer
         this.mediaPlayer = new MediaPlayer();
-
-        //Listener on Slider
-        slider.valueProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                moteur.setTempo(newValue.intValue()); //mise du tempo cote moteur
-            }
-        });
 
         //Configuration des commandes
         moteur.setCommandStart(() -> {
@@ -83,31 +62,31 @@ public class ControllerImpl implements IController {
     }
 
     public ControllerImpl() {
-
+        initialize();
     }
 
     @Override
     public void updateStarted() {
         slider.setDisable(false);
-        inc.setDisable(false);
-        dec.setDisable(false);
+        incButton.setDisable(false);
+        decButton.setDisable(false);
     }
 
     @Override
     public void stopMetronome() {
         slider.setDisable(true);
-        inc.setDisable(true);
-        dec.setDisable(true);
+        incButton.setDisable(true);
+        decButton.setDisable(true);
     }
 
     @Override
     public void updateTempo() {
-        label.setText(String.valueOf(moteur.getTempo()));
+        labelTempo.setText(String.valueOf(moteur.getTempo()));
     }
 
     @Override
     public void updateTempsParMesure() {
-        tempParMesure.textProperty().setValue(String.valueOf(moteur.getMesure()));
+        labelMesure.textProperty().setValue(String.valueOf(moteur.getMesure()));
     }
 
     @Override
@@ -136,21 +115,74 @@ public class ControllerImpl implements IController {
     }
 
     //Events methods
+    @Override
     public void onStartClick() {
         moteur.start();
     }
 
+    @Override
     public void onStopClick() {
         moteur.stop();
     }
 
+    @Override
     public void onIncClick() {
         moteur.incMesure();
     }
 
-    public void onDecClick() {
-        moteur.decMesure();
+    @Override
+    public void onDecClick() { moteur.decMesure(); }
+
+
+    @Override
+    public void setLedA(Circle ledA) {
+        this.ledA = ledA;
     }
 
+    @Override
+    public void setLedB(Circle ledB) {
+        this.ledB = ledB;
+    }
+
+    @Override
+    public void setSlider(Slider slider) {
+        this.slider = slider;
+    }
+
+    @Override
+    public void setLabelTempo(TextField labelTempo) {
+        this.labelTempo = labelTempo;
+    }
+
+    @Override
+    public void setLabelMesure(TextField labelMesure) {
+        this.labelMesure = labelMesure;
+    }
+
+    @Override
+    public void setIncButton(Button incButton) {
+        this.incButton = incButton;
+    }
+
+    @Override
+    public void setDecButton(Button decButton) {
+        this.decButton = decButton;
+    }
+
+    @Override
+    public void setTempo(int newTempo) {
+        moteur.setTempo(newTempo);
+    }
+
+   /* @Override
+    public void addSliderListener() {
+        //Listener on Slider
+        slider.valueProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                setTempo(newValue.intValue()); //mise du tempo cote moteur
+            }
+        });
+    }*/
 }
 

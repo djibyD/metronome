@@ -9,10 +9,10 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.istic.aoc.metronome.controller.ControllerImpl">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.istic.aoc.metronome.controller.FXController">
    <children>
-      <Slider fx:id="slider" layoutX="52.0" layoutY="48.0" majorTickUnit="45.0" max="190.0" orientation="VERTICAL" showTickLabels="true" showTickMarks="true" />
-      <TextField fx:id="label" alignment="CENTER" disable="true" layoutX="201.0" layoutY="63.0" prefHeight="47.0" prefWidth="198.0" text="45">
+      <Slider fx:id="slider" layoutX="52.0" layoutY="48.0" majorTickUnit="45.0" max="190.0" min="45.0" orientation="VERTICAL" showTickLabels="true" showTickMarks="true" />
+      <TextField fx:id="labelTempo" alignment="CENTER" disable="true" layoutX="201.0" layoutY="63.0" prefHeight="47.0" prefWidth="198.0" text="45">
          <font>
             <Font size="24.0" />
          </font></TextField>
@@ -20,9 +20,9 @@
       <Circle fx:id="ledA" fill="WHITE" layoutX="486.0" layoutY="51.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
       <Button fx:id="start" layoutX="52.0" layoutY="314.0" mnemonicParsing="false" onAction="#onStartClick" text="START" />
       <Button fx:id="stop" layoutX="188.0" layoutY="314.0" mnemonicParsing="false" onAction="#onStopClick" text="STOP" />
-      <Button fx:id="inc" layoutX="322.0" layoutY="314.0" mnemonicParsing="false" onAction="#onIncClick" text="INC" />
-      <Button fx:id="dec" layoutX="456.0" layoutY="314.0" mnemonicParsing="false" onAction="#onDecClick" text="DEC" />
-      <TextField fx:id="tempParMesure" alignment="CENTER" disable="true" layoutX="270.0" layoutY="174.0" prefHeight="16.0" prefWidth="60.0" text="4">
+      <Button fx:id="incButton" layoutX="322.0" layoutY="314.0" mnemonicParsing="false" onAction="#onIncClick" text="INC" />
+      <Button fx:id="decButton" layoutX="456.0" layoutY="314.0" mnemonicParsing="false" onAction="#onDecClick" text="DEC" />
+      <TextField fx:id="labelMesure" alignment="CENTER" disable="true" layoutX="270.0" layoutY="174.0" prefHeight="16.0" prefWidth="60.0" text="4">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></TextField>

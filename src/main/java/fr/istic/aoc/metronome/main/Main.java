@@ -1,6 +1,6 @@
 package fr.istic.aoc.metronome.main;
 
-import fr.istic.aoc.metronome.controller.ControllerImpl;
+import fr.istic.aoc.metronome.controller.FXController;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +24,7 @@ public class Main extends Application {
         primaryStage.show();
 
 
-        ControllerImpl controller = loader.getController();
+        FXController fxController = loader.getController();
 
     }
     public static void main(String[] args) {

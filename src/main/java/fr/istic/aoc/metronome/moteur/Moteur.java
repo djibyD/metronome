@@ -40,7 +40,9 @@ public class Moteur implements IMoteur {
     }
 
     @Override
-    public void setCommandUpdateMesure(Command command) { this.updateMesureCommand = command; }
+    public void setCommandUpdateMesure(Command command) {
+        this.updateMesureCommand = command;
+    }
 
     @Override
     public void setCommandMarquerTemps(Command command) {
@@ -61,8 +63,8 @@ public class Moteur implements IMoteur {
     public void setTempo(int tempo) {
         this.tempo = tempo;
         updateTempsCommand.execute();
-       stop();
-       start();
+        stop();
+        start();
     }
 
     @Override
@@ -75,7 +77,7 @@ public class Moteur implements IMoteur {
         isStarted = true;
         clock = new Clock(() -> {
             if (isStarted) {
-                if (compteurMesure == (mesure-1)) {
+                if (compteurMesure == (mesure - 1)) {
                     marquerMesure();
                 }
                 marquerTemps();
@@ -87,7 +89,7 @@ public class Moteur implements IMoteur {
 
     @Override
     public void stop() {
-        if(isStarted){
+        if (isStarted) {
             isStarted = false;
             compteurMesure = 0;
             clock.stop();
@@ -112,7 +114,7 @@ public class Moteur implements IMoteur {
         if (mesure < 7) {
             mesure++;
             updateMesureCommand.execute(); //fr.istic.aoc.metronome.controller.notify
-            if(isStarted){//On stop et on redemarre que si le metronome etait entrain de tourner
+            if (isStarted) {//On stop et on redemarre que si le metronome etait entrain de tourner
                 stop();
                 start();
             }
@@ -124,7 +126,7 @@ public class Moteur implements IMoteur {
         if (mesure > 2) {
             mesure--;
             updateMesureCommand.execute(); //fr.istic.aoc.metronome.controller.notify
-            if(isStarted){//On stop et on redemarre que si le metronome etait entrain de tourner
+            if (isStarted) {//On stop et on redemarre que si le metronome etait entrain de tourner
                 stop();
                 start();
             }
