@@ -2,6 +2,9 @@ package fr.istic.aoc.metronome.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Slider;
+import javafx.scene.control.TextField;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
 
@@ -10,19 +13,31 @@ import javafx.scene.shape.Rectangle;
  */
 public class FXController {
 
+    //Attributes
     @FXML
-    public Rectangle ledA;
+    public Circle ledA;
     @FXML
-    public Button start;
+    public Circle ledB;
+    @FXML
+    public Slider slider;
+    @FXML
+    public TextField label;
+    @FXML
+    public TextField tempParMesure;
+    @FXML
+    public Button inc;
+    @FXML
+    public Button dec;
 
     //Controller
     private ControllerImpl controller;
 
-   /* public void setLedA() {
-        fr.istic.aoc.metronome.controller.setLedA(ledA);
+    public FXController(){
+
     }
 
-    public void setStart(){
-        fr.istic.aoc.metronome.controller.setStart(start);
+    /*public void setLedA(){
+        controller.setLedA(this.ledA);
     }*/
+
 }

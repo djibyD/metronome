@@ -91,13 +91,13 @@ public class Moteur implements IMoteur {
             isStarted = false;
             compteurMesure = 0;
             clock.stop();
+            stopCommand.execute();
         }
     }
 
     @Override
     public void marquerTemps() {
         compteurMesure++;
-        System.out.println("cmpteur de mesure : " + compteurMesure);
         marquerTempsCommand.execute();
     }
 
@@ -105,7 +105,6 @@ public class Moteur implements IMoteur {
     public void marquerMesure() {
         marquerMesureCommand.execute();
         compteurMesure = -1;
-        //System.out.println("Je marques la mesure!");
     }
 
     @Override
@@ -113,8 +112,10 @@ public class Moteur implements IMoteur {
         if (mesure < 7) {
             mesure++;
             updateMesureCommand.execute(); //fr.istic.aoc.metronome.controller.notify
-            stop();
-            start();
+            if(isStarted){//On stop et on redemarre que si le metronome etait entrain de tourner
+                stop();
+                start();
+            }
         }
     }
 
@@ -123,8 +124,10 @@ public class Moteur implements IMoteur {
         if (mesure > 2) {
             mesure--;
             updateMesureCommand.execute(); //fr.istic.aoc.metronome.controller.notify
-            stop();
-            start();
+            if(isStarted){//On stop et on redemarre que si le metronome etait entrain de tourner
+                stop();
+                start();
+            }
         }
     }
 }

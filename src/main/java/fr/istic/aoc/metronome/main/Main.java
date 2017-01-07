@@ -19,6 +19,7 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 640, 400));
         primaryStage.setOnCloseRequest(event -> {
             Platform.exit();
+            System.exit(0);
         });
         primaryStage.show();
 
