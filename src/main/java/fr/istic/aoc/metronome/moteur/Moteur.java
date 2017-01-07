@@ -63,8 +63,10 @@ public class Moteur implements IMoteur {
     public void setTempo(int tempo) {
         this.tempo = tempo;
         updateTempsCommand.execute();
-        stop();
-        start();
+        if (isStarted) {//On stop et on redemarre que si le metronome etait entrain de tourner
+            stop();
+            start();
+        }
     }
 
     @Override
