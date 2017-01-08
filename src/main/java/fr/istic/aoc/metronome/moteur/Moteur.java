@@ -76,6 +76,10 @@ public class Moteur implements IMoteur {
 
     @Override
     public void start() {
+        if (isStarted) {//Metronome etait deja entrain de tourner
+            clock.stop();
+            isStarted = false;
+        }
         isStarted = true;
         clock = new Clock(() -> {
             if (isStarted) {
