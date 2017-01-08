@@ -1,11 +1,9 @@
 package fr.istic.aoc.metronome.controller;
 
 
-import fr.istic.aoc.metronome.media.MediaPlayer;
+import fr.istic.aoc.metronome.media.EmetteurSonoreImpl;
 import fr.istic.aoc.metronome.moteur.IMoteur;
 import fr.istic.aoc.metronome.moteur.Moteur;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
@@ -26,8 +24,8 @@ public class ControllerImpl implements IController {
 
     //Moteur
     private IMoteur moteur;
-    //MediaPlayer
-    private MediaPlayer mediaPlayer;
+    //EmetteurSonoreImpl
+    private EmetteurSonoreImpl mediaPlayer;
 
     //Initialisation
     public void initialize() {
@@ -35,8 +33,8 @@ public class ControllerImpl implements IController {
         //Initialisation du moteur
         this.moteur = new Moteur();
 
-        //Initialisation du MediaPlayer
-        this.mediaPlayer = new MediaPlayer();
+        //Initialisation du EmetteurSonoreImpl
+        this.mediaPlayer = new EmetteurSonoreImpl();
 
         //Configuration des commandes
         moteur.setCommandStart(() -> {
@@ -91,14 +89,14 @@ public class ControllerImpl implements IController {
 
     @Override
     public void marquerTemps() {
-        mediaPlayer.playSound();
+        mediaPlayer.emettreClic();
         flash(ledA, Color.RED, Color.WHITE);
 
     }
 
     @Override
     public void marquerMesure() {
-        flash(ledB, Color.GREENYELLOW, Color.WHITE);
+        flash(ledB, Color.RED, Color.WHITE);
     }
 
     //Allumer les leds
@@ -174,15 +172,5 @@ public class ControllerImpl implements IController {
         moteur.setTempo(newTempo);
     }
 
-   /* @Override
-    public void addSliderListener() {
-        //Listener on Slider
-        slider.valueProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                setTempo(newValue.intValue()); //mise du tempo cote moteur
-            }
-        });
-    }*/
 }
 

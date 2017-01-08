@@ -8,14 +8,15 @@ import java.net.URL;
 /**
  * Created by djiby on 07/01/17.
  */
-public class MediaPlayer {
+public class EmetteurSonoreImpl implements EmetteurSonore{
 
     //Contructeur
-    public MediaPlayer(){
+    public EmetteurSonoreImpl(){
 
     }
 
-    public void playSound() {
+    @Override
+    public void emettreClic() {
 
         String url = "file:./src/main/resources/beep.wav";
 

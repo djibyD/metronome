@@ -24,7 +24,7 @@ public class Main extends Application {
         primaryStage.show();
 
 
-        FXController fxController = loader.getController();
+        FXController controller = loader.getController();
 
     }
     public static void main(String[] args) {
