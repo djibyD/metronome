@@ -18,10 +18,10 @@
          </font></TextField>
       <Circle fx:id="ledB" fill="WHITE" layoutX="486.0" layoutY="129.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="ledA" fill="WHITE" layoutX="486.0" layoutY="51.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
-      <Button fx:id="start" layoutX="52.0" layoutY="314.0" mnemonicParsing="false" onAction="#onStartClick" text="START" />
-      <Button fx:id="stop" layoutX="188.0" layoutY="314.0" mnemonicParsing="false" onAction="#onStopClick" text="STOP" />
-      <Button fx:id="incButton" layoutX="322.0" layoutY="314.0" mnemonicParsing="false" onAction="#onIncClick" text="INC" />
-      <Button fx:id="decButton" layoutX="456.0" layoutY="314.0" mnemonicParsing="false" onAction="#onDecClick" text="DEC" />
+      <Button fx:id="start" layoutX="52.0" layoutY="314.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#onStartClick" prefHeight="40.0" prefWidth="72.0" text="START" />
+      <Button fx:id="stop" layoutX="188.0" layoutY="314.0" mnemonicParsing="false" onAction="#onStopClick" prefHeight="40.0" prefWidth="72.0" text="STOP" />
+      <Button fx:id="incButton" layoutX="322.0" layoutY="314.0" mnemonicParsing="false" onAction="#onIncClick" prefHeight="40.0" prefWidth="72.0" text="INC" />
+      <Button fx:id="decButton" layoutX="456.0" layoutY="314.0" mnemonicParsing="false" onAction="#onDecClick" prefHeight="40.0" prefWidth="72.0" text="DEC" />
       <TextField fx:id="labelMesure" alignment="CENTER" disable="true" layoutX="270.0" layoutY="174.0" prefHeight="16.0" prefWidth="60.0" text="4">
          <font>
             <Font name="System Bold" size="14.0" />
