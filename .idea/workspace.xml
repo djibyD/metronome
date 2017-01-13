@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c20d706-c7da-4408-98bd-6fbd282dec28" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bip.mp3" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="metronome.iws" />
@@ -35,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FXController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FXController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/FXController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
@@ -44,6 +44,16 @@
                 <element signature="e#2030#2031#0" expanded="true" />
                 <element signature="e#2072#2073#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -939,12 +949,12 @@
       <workItem from="1484312857739" duration="120000" />
       <workItem from="1484313026958" duration="150000" />
       <workItem from="1484313678928" duration="789000" />
-      <workItem from="1484329619579" duration="806000" />
+      <workItem from="1484329619579" duration="1037000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130799000" />
+    <option name="totallyTimeSpent" value="131030000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1336,14 +1346,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/FXController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1352,6 +1354,14 @@
             <element signature="e#2030#2031#0" expanded="true" />
             <element signature="e#2072#2073#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
