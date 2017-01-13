@@ -32,7 +32,7 @@ public interface IController {
 
     void onDecClick();
 
-    void setLedA(Circle ledA);
+    /*void setLedA(Circle ledA);
 
     void setLedB(Circle ledB);
 
@@ -44,7 +44,7 @@ public interface IController {
 
     void setIncButton(Button incButton);
 
-    void setDecButton(Button decButton);
+    void setDecButton(Button decButton);*/
 
     void setTempo(int newTempo); //Pour mettre le jour le tempo du moteur
 

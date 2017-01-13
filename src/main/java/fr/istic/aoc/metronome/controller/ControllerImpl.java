@@ -1,6 +1,10 @@
 package fr.istic.aoc.metronome.controller;
 
 
+import fr.istic.aoc.metronome.ihm.Afficheur;
+import fr.istic.aoc.metronome.ihm.Bouton;
+import fr.istic.aoc.metronome.ihm.BoutonAdapter;
+import fr.istic.aoc.metronome.ihm.Molette;
 import fr.istic.aoc.metronome.media.EmetteurSonoreImpl;
 import fr.istic.aoc.metronome.moteur.IMoteur;
 import fr.istic.aoc.metronome.moteur.Moteur;
@@ -14,14 +18,17 @@ import javafx.scene.shape.Circle;
 public class ControllerImpl implements IController {
 
     //Attributes
-    public Circle ledA;
-    public Circle ledB;
-    public Slider slider;
-    public TextField labelTempo;
-    public TextField labelMesure;
-    public Button incButton;
-    public Button decButton;
+    public Afficheur ledA;
+    public Afficheur ledB;
+    public Molette slider;
+    public Afficheur labelTempo;
+    public Afficheur labelMesure;
+    public Bouton startButton;
+    public Bouton stopButoon;
+    public Bouton incButton;
+    public Bouton decButton;
 
+    private Bouton boutonAdapteur;
     //Moteur
     private IMoteur moteur;
     //EmetteurSonoreImpl
@@ -65,38 +72,39 @@ public class ControllerImpl implements IController {
 
     @Override
     public void updateStarted() {
-        slider.setDisable(false);
-        incButton.setDisable(false);
-        decButton.setDisable(false);
+        // slider.setDisable(false);
+       /* incButton.setDisable(false);
+        decButton.setDisable(false);*/
+        boutonAdapteur.setDisableINCDEC();
     }
 
     @Override
     public void stopMetronome() {
-        slider.setDisable(true);
-        incButton.setDisable(true);
-        decButton.setDisable(true);
+        // slider.setDisable(true);
+       /* incButton.setDisable(true);
+        decButton.setDisable(true);*/
     }
 
     @Override
     public void updateTempo() {
-        labelTempo.setText(String.valueOf(moteur.getTempo()));
+        //labelTempo.setText(String.valueOf(moteur.getTempo()));
     }
 
     @Override
     public void updateTempsParMesure() {
-        labelMesure.textProperty().setValue(String.valueOf(moteur.getMesure()));
+        //labelMesure.textProperty().setValue(String.valueOf(moteur.getMesure()));
     }
 
     @Override
     public void marquerTemps() {
         mediaPlayer.emettreClic();
-        flash(ledA, Color.RED, Color.WHITE);
+        // flash(ledA, Color.RED, Color.WHITE);
 
     }
 
     @Override
     public void marquerMesure() {
-        flash(ledB, Color.RED, Color.WHITE);
+        //  flash(ledB, Color.RED, Color.WHITE);
     }
 
     //Allumer les leds
@@ -132,7 +140,7 @@ public class ControllerImpl implements IController {
     public void onDecClick() { moteur.decMesure(); }
 
 
-    @Override
+    /*@Override
     public void setLedA(Circle ledA) {
         this.ledA = ledA;
     }
@@ -165,7 +173,7 @@ public class ControllerImpl implements IController {
     @Override
     public void setDecButton(Button decButton) {
         this.decButton = decButton;
-    }
+    }*/
 
     @Override
     public void setTempo(int newTempo) {

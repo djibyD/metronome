@@ -9,21 +9,31 @@ import fr.istic.aoc.metronome.command.Command;;
 /**
  * Created by djiby on 07/11/16.
  */
-public class Clock {
+public class Clock implements Horloge{
 
-    private Command commande;
     private ScheduledExecutorService scheduler;
 
-    public Clock(Command cmd) {
-        this.commande = cmd;
-    }
+    public Clock() {}
 
-    public void start(long period) {
+    @Override
+    public void activerPeriodiquement(Command command, long period) {
         if (scheduler != null) {
             this.stop();
         }
         scheduler = Executors.newScheduledThreadPool(1);
-        scheduler.scheduleAtFixedRate(() -> commande.execute(), 1000L, period, TimeUnit.MILLISECONDS);
+        scheduler.scheduleAtFixedRate(() -> command.execute(), 1000L, period, TimeUnit.MILLISECONDS);
+    }
+
+    @Override
+    public void activerApresDelai(Command command, long delai) {
+        System.out.println("je vais regarde rds le moteur");
+        scheduler = Executors.newScheduledThreadPool(1);
+        scheduler.scheduleWithFixedDelay(() -> command.execute(), 0L, delai, TimeUnit.MILLISECONDS);
+    }
+
+    @Override
+    public void desactiver(Command command) {
+
     }
 
     public void stop() {

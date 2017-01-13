@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c20d706-c7da-4408-98bd-6fbd282dec28" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/metronome.fxml" afterPath="$PROJECT_DIR$/src/main/resources/metronome.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/Afficheur.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/AfficheurImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/Bouton.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/BoutonAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/Clavier.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/ClavierImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/Molette.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/MoletteImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/materiel/Materiel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/timer/Horloge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/ControllerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/ControllerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/FXController.java" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/FXController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/IController.java" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/IController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/moteur/Moteur.java" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/moteur/Moteur.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/timer/Clock.java" afterPath="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/timer/Clock.java" />
     </list>
     <ignored path="metronome.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,39 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Moteur.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Moteur.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/moteur/Moteur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1152">
-              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#682#683#0" expanded="false" />
-                <element signature="e#725#726#0" expanded="false" />
-                <element signature="e#790#791#0" expanded="false" />
-                <element signature="e#832#833#0" expanded="false" />
-                <element signature="e#904#905#0" expanded="false" />
-                <element signature="e#953#954#0" expanded="false" />
-                <element signature="e#1026#1027#0" expanded="false" />
-                <element signature="e#1076#1077#0" expanded="false" />
-                <element signature="e#1149#1150#0" expanded="false" />
-                <element signature="e#1199#1200#0" expanded="false" />
-                <element signature="e#1273#1274#0" expanded="false" />
-                <element signature="e#1324#1325#0" expanded="false" />
-                <element signature="e#1367#1368#0" expanded="false" />
-                <element signature="e#1400#1401#0" expanded="false" />
-                <element signature="e#1715#1716#0" expanded="false" />
-                <element signature="e#1749#1750#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FXController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/FXController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="553">
+              <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,26 +51,30 @@
       <file leaf-file-name="ControllerImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/ControllerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="98" column="29" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
-              <folding>
-                <element signature="e#2380#2381#0" expanded="true" />
-                <element signature="e#2431#2432#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="108">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metronome.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/metronome.fxml">
+      <file leaf-file-name="IController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/IController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+            <state relative-caret-position="481">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="FXController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/FXController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="553">
+              <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -118,17 +107,19 @@
         <option value="$PROJECT_DIR$/src/main/resources/sample.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/observer/Sujet.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/observer/Observer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/timer/Clock.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/moteur/IMoteur.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/media/MediaPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/media/LecteurMedia.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/FXController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/IController.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/media/EmetteurSonoreImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/ControllerImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/moteur/Moteur.java" />
         <option value="$PROJECT_DIR$/src/main/resources/metronome.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/AfficheurImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/timer/Horloge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/timer/Clock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/ControllerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/FXController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/IController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/moteur/Moteur.java" />
       </list>
     </option>
   </component>
@@ -179,9 +170,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -352,7 +340,67 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="materiel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="metronome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="metronome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="metronome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="metronome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="metronome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="metronome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ihm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -414,6 +462,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -421,31 +472,34 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Bureau/metronome.v2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="fr.istic.aoc.metronome" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/fr.istic.aoc.metronome/controller" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
-      <recent name="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="fr.istic.aoc.metronome.media" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/resources/controller" />
       <recent name="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller" />
       <recent name="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="fr.istic.aoc.metronome" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="fr.istic.aoc.metronome.timer" />
+      <recent name="fr.istic.aoc.metronome.materiel" />
+      <recent name="fr.istic.aoc.metronome.media" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome" />
+      <recent name="$PROJECT_DIR$/src/main/resources/fr.istic.aoc.metronome/controller" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
@@ -965,11 +1019,12 @@
       <workItem from="1483900469168" duration="404000" />
       <workItem from="1484053500488" duration="211000" />
       <workItem from="1484221329342" duration="210000" />
+      <workItem from="1484330884750" duration="411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127653000" />
+    <option name="totallyTimeSpent" value="128064000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -991,7 +1046,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40402478" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4024768" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68111455" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1060,76 +1115,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/metronome.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="106" selection-start-line="14" selection-start-column="94" selection-end-line="14" selection-end-column="106" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/ControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1206">
-          <caret line="78" column="17" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/IController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/observer/Sujet.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/moteur/Moteur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/timer/Clock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="36" column="22" selection-start-line="33" selection-start-column="8" selection-end-line="36" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/metronome.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/ControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/IController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -1302,20 +1287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/timer/Clock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/IController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/media/EmetteurSonoreImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
@@ -1344,60 +1315,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/moteur/Moteur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#682#683#0" expanded="false" />
-            <element signature="e#725#726#0" expanded="false" />
-            <element signature="e#790#791#0" expanded="false" />
-            <element signature="e#832#833#0" expanded="false" />
-            <element signature="e#904#905#0" expanded="false" />
-            <element signature="e#953#954#0" expanded="false" />
-            <element signature="e#1026#1027#0" expanded="false" />
-            <element signature="e#1076#1077#0" expanded="false" />
-            <element signature="e#1149#1150#0" expanded="false" />
-            <element signature="e#1199#1200#0" expanded="false" />
-            <element signature="e#1273#1274#0" expanded="false" />
-            <element signature="e#1324#1325#0" expanded="false" />
-            <element signature="e#1367#1368#0" expanded="false" />
-            <element signature="e#1400#1401#0" expanded="false" />
-            <element signature="e#1715#1716#0" expanded="false" />
-            <element signature="e#1749#1750#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/FXController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/ControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="98" column="29" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
-          <folding>
-            <element signature="e#2380#2381#0" expanded="true" />
-            <element signature="e#2431#2432#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/metronome.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="153">
           <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/timer/Horloge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/materiel/Materiel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/AfficheurImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/MoletteImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/Bouton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/Afficheur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/Molette.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/ClavierImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/Clavier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/ihm/BoutonAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/timer/Clock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/FXController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/ControllerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/controller/IController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/istic/aoc/metronome/moteur/Moteur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

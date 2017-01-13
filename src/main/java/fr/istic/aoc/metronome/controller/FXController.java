@@ -1,5 +1,9 @@
 package fr.istic.aoc.metronome.controller;
 
+import fr.istic.aoc.metronome.ihm.Bouton;
+import fr.istic.aoc.metronome.ihm.BoutonAdapter;
+import fr.istic.aoc.metronome.ihm.Clavier;
+import fr.istic.aoc.metronome.ihm.ClavierImpl;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -29,84 +33,108 @@ public class FXController {
     @FXML
     public TextField labelMesure;
     @FXML
+    public Button startButton;
+    @FXML
+    public Button stopcButton;
+    @FXML
     public Button incButton;
     @FXML
     public Button decButton;
 
+    //Clavier
+    private Clavier clavier;
+
     //Controller
     private IController controller;
 
+    private Bouton boutonAdapteur;
+
     @FXML
     public void initialize() {
-        controller = new ControllerImpl();
+        // boutonAdapteur = new BoutonAdapter();
+        //controller = new ControllerImpl();
+        clavier = new ClavierImpl();
+        boutonAdapteur = new BoutonAdapter(this);
+        //Adapteur
+        //boutonAdapteur = new BoutonAdapter();
 
         //Configuration
-        setLedA();
+       /* setLedA();
         setLedB();
         setSlider();
         setLabelTempo();
         setLabelMesure();
         setIncButton();
-        setDecButton();
+        setDecButton();*/
 
         slider.valueProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                setTempo(newValue.intValue());
+                // setTempo(newValue.intValue());
             }
         });
 
     }
 
-    public FXController(){
+    public FXController() {
 
     }
+    /*
+        public void setLedA(){
+            controller.setLedA(this.ledA);
+        }
 
-    public void setLedA(){
-        controller.setLedA(this.ledA);
-    }
+        public void setLedB(){
+            controller.setLedB(this.ledB);
+        }
 
-    public void setLedB(){
-        controller.setLedB(this.ledB);
-    }
+        public void setSlider(){
+            controller.setSlider(this.slider);
+        }
 
-    public void setSlider(){
-        controller.setSlider(this.slider);
-    }
+        public void setLabelTempo(){
+            controller.setLabelTempo(this.labelTempo);
+        }
 
-    public void setLabelTempo(){
-        controller.setLabelTempo(this.labelTempo);
-    }
+        public void setLabelMesure(){
+            controller.setLabelMesure(this.labelMesure);
+        }
 
-    public void setLabelMesure(){
-        controller.setLabelMesure(this.labelMesure);
-    }
+        public void setIncButton(){
+            controller.setIncButton(this.incButton);
+        }
 
-    public void setIncButton(){
-        controller.setIncButton(this.incButton);
-    }
+        public void setDecButton(){
+            controller.setDecButton(this.decButton);
+        }
 
-    public void setDecButton(){
-        controller.setDecButton(this.decButton);
-    }
-
-    public void setTempo(int tempo){
-        controller.setTempo(tempo);
-    }
-
+        public void setTempo(int tempo) {
+            controller.setTempo(tempo);
+        }
+    */
     //Events methods
     public void onStartClick() {
-        controller.onStartClick();
+        System.out.println("vers claviers");
+        clavier.press(1);
     }
 
     public void onStopClick() {
-        controller.onStopClick();
+        clavier.press(2);
     }
 
     public void onIncClick() {
-        controller.onIncClick();
+        clavier.press(3);
     }
 
-    public void onDecClick() { controller.onDecClick(); }
+    public void onDecClick() {
+        clavier.press(4);
+    }
 
+    public Clavier getClavier() {
+        return clavier;
+    }
+
+    public IController getController() {
+        return controller;
+    }
 }
