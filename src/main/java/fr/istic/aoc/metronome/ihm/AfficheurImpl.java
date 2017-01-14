@@ -22,6 +22,9 @@ public class AfficheurImpl implements Afficheur {
         controller.setMarquerMesureCmd(() -> {
             flashLedB();
         });
+        controller.setTempoUpdateCmd(() -> {
+            afficherTempo(controller.getTempoMateriel());
+        });
     }
 
     @Override
@@ -38,7 +41,7 @@ public class AfficheurImpl implements Afficheur {
 
     @Override
     public void afficherTempo(int valeurTempo) {
-
+        fxController.afficherTempo(valeurTempo);
     }
 
     @Override

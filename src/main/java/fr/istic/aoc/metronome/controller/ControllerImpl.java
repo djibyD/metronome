@@ -13,18 +13,26 @@ import javafx.scene.shape.Circle;
 public class ControllerImpl implements IController {
 
     //Attributes
-    public Afficheur afficheur;
+    /*public Afficheur afficheur;
     public Molette slider;
     public Bouton startButton;
     public Bouton stopButoon;
     public Bouton incButton;
-    public Bouton decButton;
+    public Bouton decButton;*/
 
-    private Bouton boutonAdapteur;
+    //private Bouton boutonAdapteur;
     //Moteur
     private IMoteur moteur;
     //EmetteurSonoreImpl
     private EmetteurSonoreImpl mediaPlayer;
+
+    @Override
+    public int getTempoMateriel() {
+        return tempoMateriel;
+    }
+
+    //Tempo, pour passer le tempo du moteur vers le Materiel
+    private int tempoMateriel = 0;
 
 
     //Pattern command entre controller et adapter
@@ -46,6 +54,12 @@ public class ControllerImpl implements IController {
     }
 
     private Command marquerMesureCmd;
+
+    public void setTempoUpdateCmd(Command tempoUpdateCmd) {
+        this.tempoUpdateCmd = tempoUpdateCmd;
+    }
+
+    private Command tempoUpdateCmd;
 
 
     //Initialisation
@@ -110,6 +124,7 @@ public class ControllerImpl implements IController {
     @Override
     public void updateTempo() {
         //labelTempo.setText(String.valueOf(moteur.getTempo()));
+        tempoUpdateCmd.execute();
     }
 
     @Override
@@ -207,6 +222,7 @@ public class ControllerImpl implements IController {
     @Override
     public void setTempo(int newTempo) {
         moteur.setTempo(newTempo);
+        tempoMateriel = moteur.getTempo();
     }
 
 }

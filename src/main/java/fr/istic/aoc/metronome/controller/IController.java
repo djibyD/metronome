@@ -52,5 +52,10 @@ public interface IController {
     void setStartCmd(Command startCmd);
     void setMarqeurTempCmd(Command marqeurTempCmd);
     void setMarquerMesureCmd(Command marquerMesureCmd);
+    void setTempoUpdateCmd(Command tempoUpdateCmd);
+
+
+    //Transmission donne(tempo) du moteur vers le materiel
+    int getTempoMateriel();
 
 }

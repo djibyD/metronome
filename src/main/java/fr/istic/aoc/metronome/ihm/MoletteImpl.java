@@ -1,16 +1,25 @@
 package fr.istic.aoc.metronome.ihm;
 
+import fr.istic.aoc.metronome.controller.FXController;
+import fr.istic.aoc.metronome.controller.IController;
+
 /**
  * Created by djiby on 08/01/17.
  */
 public class MoletteImpl implements Molette {
 
-    public MoletteImpl(){
+    private IController controller;
+    private FXController fxController;
 
+
+    public MoletteImpl(FXController fxc, IController c){
+        fxController = fxc;
+        controller = c;
     }
 
     @Override
-    public float position() {
-        return 0;
+    public void setTempo(int tempo) {
+        controller.setTempo(tempo);
     }
+
 }

@@ -74,7 +74,7 @@ public class FXController {
         slider.valueProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                // setTempo(newValue.intValue());
+                materiel.getMolette().setTempo(newValue.intValue());
             }
         });
 
@@ -152,5 +152,9 @@ public class FXController {
             }
             led.setFill(off);
         }).start();
+    }
+
+    public void afficherTempo(int valeurTempo) {
+        labelTempo.setText(String.valueOf(valeurTempo));
     }
 }

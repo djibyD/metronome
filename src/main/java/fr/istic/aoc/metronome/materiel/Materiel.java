@@ -29,7 +29,7 @@ public class Materiel {
         controller = new ControllerImpl();
 
         clavier = new ClavierImpl(fxController, controller);
-        molette = new MoletteImpl();
+        molette = new MoletteImpl(fxController, controller);
         afficheur = new AfficheurImpl(fxController, controller);
        // emetteurSonore = new EmetteurSonoreImpl();
 
