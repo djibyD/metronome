@@ -6,9 +6,6 @@ import fr.istic.aoc.metronome.ihm.*;
 import fr.istic.aoc.metronome.media.EmetteurSonoreImpl;
 import fr.istic.aoc.metronome.moteur.IMoteur;
 import fr.istic.aoc.metronome.moteur.Moteur;
-import javafx.scene.control.Button;
-import javafx.scene.control.Slider;
-import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
@@ -29,11 +26,27 @@ public class ControllerImpl implements IController {
     //EmetteurSonoreImpl
     private EmetteurSonoreImpl mediaPlayer;
 
-    public void setDemarrer(Command demarrer) {
-        this.demarrer = demarrer;
+
+    //Pattern command entre controller et adapter
+    public void setStartCmd(Command startCmd) {
+        this.startCmd = startCmd;
     }
 
-    private Command demarrer;
+    private Command startCmd;
+    private Command stopCmd;
+
+    public void setMarqeurTempCmd(Command marqeurTempCmd) {
+        this.marqeurTempCmd = marqeurTempCmd;
+    }
+
+    private Command marqeurTempCmd;
+
+    public void setMarquerMesureCmd(Command marquerMesureCmd) {
+        this.marquerMesureCmd = marquerMesureCmd;
+    }
+
+    private Command marquerMesureCmd;
+
 
     //Initialisation
     public void initialize() {
@@ -42,7 +55,7 @@ public class ControllerImpl implements IController {
         this.moteur = new Moteur();
 
         //Initialisation des composants
-        afficheur = new AfficheurImpl();
+        //afficheur = new AfficheurImpl();
 
         //Initialisation du EmetteurSonoreImpl
         this.mediaPlayer = new EmetteurSonoreImpl();
@@ -64,7 +77,7 @@ public class ControllerImpl implements IController {
             updateTempsParMesure();
         });
         moteur.setCommandMarquerTemps(() -> {
-            System.out.println("set commande");
+           // System.out.println("set commande");
             marquerTemps();
         });
         moteur.setCommandMarquerMesure(() -> {
@@ -84,7 +97,7 @@ public class ControllerImpl implements IController {
         decButton.setDisable(false);*/
         //boutonAdapteur.setDisableINCDEC();
         //System.out.println("Suis fary");
-        demarrer.execute();
+        startCmd.execute();
     }
 
     @Override
@@ -107,19 +120,23 @@ public class ControllerImpl implements IController {
     @Override
     public void marquerTemps() {
        // labelTempo.
-        System.out.println("marquertemps");
+        //System.out.println("marquertemps");
         mediaPlayer.emettreClic();
+        marqeurTempCmd.execute();
+       // afficheur.flashLedA();
         // flash(ledA, Color.RED, Color.WHITE);
 
     }
 
     @Override
     public void marquerMesure() {
+        marquerMesureCmd.execute();
+       // afficheur.flashLedB();
         //  flash(ledB, Color.RED, Color.WHITE);
     }
 
     //Allumer les leds
-    private void flash(Circle led, Color on, Color off) {
+    /*private void flash(Circle led, Color on, Color off) {
         new Thread(() -> {
             led.setFill(on);
             try {
@@ -129,13 +146,13 @@ public class ControllerImpl implements IController {
             }
             led.setFill(off);
         }).start();
-    }
+    }*/
 
     //Events methods
     @Override
     public void onStartClick() {
         moteur.start();
-        System.out.println("J'ai commencer");
+       // System.out.println("J'ai commencer");
     }
 
     @Override

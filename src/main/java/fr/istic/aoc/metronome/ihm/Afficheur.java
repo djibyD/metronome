@@ -8,9 +8,10 @@ import javafx.scene.shape.Circle;
  */
 public interface Afficheur {
 
-    void allumerLED(int numLED) ;
-    void eteindreLED(int numLED) ;
+    void flashLedA() ;
+    void flashLedB() ;
     void afficherTempo(int valeurTempo) ;
+    void afficherMesure(int valeurTempo) ;
     //public void flash();
 
     /*public void marquerTemps();

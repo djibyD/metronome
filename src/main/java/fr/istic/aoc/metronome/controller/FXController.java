@@ -4,6 +4,7 @@ import fr.istic.aoc.metronome.ihm.Bouton;
 import fr.istic.aoc.metronome.ihm.BoutonAdapter;
 import fr.istic.aoc.metronome.ihm.Clavier;
 import fr.istic.aoc.metronome.ihm.ClavierImpl;
+import fr.istic.aoc.metronome.materiel.Materiel;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -42,7 +43,10 @@ public class FXController {
     public Button decButton;
 
     //Clavier
-    private Clavier clavier;
+    //private Clavier clavier;
+
+    //Materiel
+    private Materiel materiel;
 
     //Controller
     //private IController controller;
@@ -51,8 +55,9 @@ public class FXController {
 
     @FXML
     public void initialize() {
+        materiel = new Materiel(this);
         // boutonAdapteur = new BoutonAdapter();
-        clavier = new ClavierImpl(this);
+        //clavier = new ClavierImpl(this);
        // boutonAdapteur = new BoutonAdapter(this);
         //Adapteur
         //boutonAdapteur = new BoutonAdapter();
@@ -114,48 +119,38 @@ public class FXController {
     */
     //Events methods
     public void onStartClick() {
-       // System.out.println("vers claviers");
-        clavier.press(1);
-        //System.out.println("after pressed");
+        materiel.getClavier().press(1);
     }
 
     public void onStopClick() {
-        clavier.press(2);
+        materiel.getClavier().press(2);
     }
 
     public void onIncClick() {
-        clavier.press(3);
+        materiel.getClavier().press(3);
     }
 
     public void onDecClick() {
-        clavier.press(4);
+        materiel.getClavier().press(4);
     }
 
     public void flashLedA() {
-        ledA.setFill(Color.RED);
-        try {
-            Thread.sleep(200);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        ledA.setFill(Color.WHITE);
+        flash(ledA, Color.RED, Color.WHITE);
     }
 
     public void flashLedB() {
-        ledB.setFill(Color.RED);
-        try {
-            Thread.sleep(200);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        ledB.setFill(Color.WHITE);
+        flash(ledB, Color.RED, Color.WHITE);
     }
 
-   /* public Clavier getClavier() {
-        return clavier;
-    }*/
-
-   /* public IController getController() {
-        return controller;
-    }*/
+    private void flash(Circle led, Color on, Color off) {
+        new Thread(() -> {
+            led.setFill(on);
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            led.setFill(off);
+        }).start();
+    }
 }
