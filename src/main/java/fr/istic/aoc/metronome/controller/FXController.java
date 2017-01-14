@@ -45,16 +45,15 @@ public class FXController {
     private Clavier clavier;
 
     //Controller
-    private IController controller;
+    //private IController controller;
 
-    private Bouton boutonAdapteur;
+   // private Bouton boutonAdapteur;
 
     @FXML
     public void initialize() {
         // boutonAdapteur = new BoutonAdapter();
-        //controller = new ControllerImpl();
-        clavier = new ClavierImpl();
-        boutonAdapteur = new BoutonAdapter(this);
+        clavier = new ClavierImpl(this);
+       // boutonAdapteur = new BoutonAdapter(this);
         //Adapteur
         //boutonAdapteur = new BoutonAdapter();
 
@@ -79,6 +78,7 @@ public class FXController {
     public FXController() {
 
     }
+
     /*
         public void setLedA(){
             controller.setLedA(this.ledA);
@@ -114,8 +114,9 @@ public class FXController {
     */
     //Events methods
     public void onStartClick() {
-        System.out.println("vers claviers");
+       // System.out.println("vers claviers");
         clavier.press(1);
+        //System.out.println("after pressed");
     }
 
     public void onStopClick() {
@@ -130,11 +131,31 @@ public class FXController {
         clavier.press(4);
     }
 
-    public Clavier getClavier() {
-        return clavier;
+    public void flashLedA() {
+        ledA.setFill(Color.RED);
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        ledA.setFill(Color.WHITE);
     }
 
-    public IController getController() {
-        return controller;
+    public void flashLedB() {
+        ledB.setFill(Color.RED);
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        ledB.setFill(Color.WHITE);
     }
+
+   /* public Clavier getClavier() {
+        return clavier;
+    }*/
+
+   /* public IController getController() {
+        return controller;
+    }*/
 }

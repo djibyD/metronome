@@ -48,4 +48,7 @@ public interface IController {
 
     void setTempo(int newTempo); //Pour mettre le jour le tempo du moteur
 
+    //Pour le clavier
+    public void setDemarrer(Command demarrer);
+
 }

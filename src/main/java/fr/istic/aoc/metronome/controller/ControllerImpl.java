@@ -1,10 +1,8 @@
 package fr.istic.aoc.metronome.controller;
 
 
-import fr.istic.aoc.metronome.ihm.Afficheur;
-import fr.istic.aoc.metronome.ihm.Bouton;
-import fr.istic.aoc.metronome.ihm.BoutonAdapter;
-import fr.istic.aoc.metronome.ihm.Molette;
+import fr.istic.aoc.metronome.command.Command;
+import fr.istic.aoc.metronome.ihm.*;
 import fr.istic.aoc.metronome.media.EmetteurSonoreImpl;
 import fr.istic.aoc.metronome.moteur.IMoteur;
 import fr.istic.aoc.metronome.moteur.Moteur;
@@ -18,11 +16,8 @@ import javafx.scene.shape.Circle;
 public class ControllerImpl implements IController {
 
     //Attributes
-    public Afficheur ledA;
-    public Afficheur ledB;
+    public Afficheur afficheur;
     public Molette slider;
-    public Afficheur labelTempo;
-    public Afficheur labelMesure;
     public Bouton startButton;
     public Bouton stopButoon;
     public Bouton incButton;
@@ -34,17 +29,27 @@ public class ControllerImpl implements IController {
     //EmetteurSonoreImpl
     private EmetteurSonoreImpl mediaPlayer;
 
+    public void setDemarrer(Command demarrer) {
+        this.demarrer = demarrer;
+    }
+
+    private Command demarrer;
+
     //Initialisation
     public void initialize() {
 
         //Initialisation du moteur
         this.moteur = new Moteur();
 
+        //Initialisation des composants
+        afficheur = new AfficheurImpl();
+
         //Initialisation du EmetteurSonoreImpl
         this.mediaPlayer = new EmetteurSonoreImpl();
 
         //Configuration des commandes
         moteur.setCommandStart(() -> {
+            //System.out.println("dans start");
             updateStarted();
         });
 
@@ -59,6 +64,7 @@ public class ControllerImpl implements IController {
             updateTempsParMesure();
         });
         moteur.setCommandMarquerTemps(() -> {
+            System.out.println("set commande");
             marquerTemps();
         });
         moteur.setCommandMarquerMesure(() -> {
@@ -67,6 +73,7 @@ public class ControllerImpl implements IController {
     }
 
     public ControllerImpl() {
+        //System.out.println("controller moteur");
         initialize();
     }
 
@@ -75,7 +82,9 @@ public class ControllerImpl implements IController {
         // slider.setDisable(false);
        /* incButton.setDisable(false);
         decButton.setDisable(false);*/
-        boutonAdapteur.setDisableINCDEC();
+        //boutonAdapteur.setDisableINCDEC();
+        //System.out.println("Suis fary");
+        demarrer.execute();
     }
 
     @Override
@@ -97,6 +106,8 @@ public class ControllerImpl implements IController {
 
     @Override
     public void marquerTemps() {
+       // labelTempo.
+        System.out.println("marquertemps");
         mediaPlayer.emettreClic();
         // flash(ledA, Color.RED, Color.WHITE);
 
@@ -124,6 +135,7 @@ public class ControllerImpl implements IController {
     @Override
     public void onStartClick() {
         moteur.start();
+        System.out.println("J'ai commencer");
     }
 
     @Override

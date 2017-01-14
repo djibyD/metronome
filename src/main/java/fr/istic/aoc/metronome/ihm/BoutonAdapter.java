@@ -14,18 +14,19 @@ public class BoutonAdapter implements Bouton {
     private IController controller;
     private Clavier clavier;
     private Horloge clock;
-    private FXController fxController;
+    //private FXController fxController;
 
     public BoutonAdapter(FXController fxc) {
-        this.fxController=fxc;
-        controller = new ControllerImpl();
-        this.clavier=fxController.getClavier();
+       // this.fxController=fxc;
+        //controller = new ControllerImpl();
+        //this.clavier=fxController.getClavier();
         //new Thread(() -> {
-            clock = new Clock();
+          /*  clock = new Clock();
             clock.activerPeriodiquement(() -> {
+                System.out.println("execute code");
                 afterStartClicked();
                 System.out.println("tour");
-            }, 100);
+            }, 100);*/
        // }).start();
     }
 
@@ -37,24 +38,24 @@ public class BoutonAdapter implements Bouton {
     @Override
     public void setDisableINCDEC() {
         // slider.setDisable(false);
-        System.out.println("hhhhhhhhhhhhhh");
+      /*  System.out.println("hhhhhhhhhhhhhh");
         fxController.incButton.setDisable(false);
-        fxController.decButton.setDisable(false);
+        fxController.decButton.setDisable(false);*/
     }
 
     public void afterStartClicked(){
-        System.out.println("eeeeeeeeeee");
+       /* System.out.println("eeeeeeeeeee");
         switch (clavier.touchePressee()){
             case 1 : controller.onStartClick(); System.out.println("Dans le switch 1"); break;
             case 2 : controller.onStopClick();System.out.println("Dans le switch 2"); break;
             case 3 : controller.onIncClick();System.out.println("Dans le switch 3"); break;
             case 4 : controller.onDecClick(); System.out.println("Dans le switch 4");break;
             default:
-        }
+        }*/
     }
 
     //Events methods
-    public void onStartClick() {
+   /* public void onStartClick() {
         fxController.onStartClick();
     }
 
@@ -68,5 +69,5 @@ public class BoutonAdapter implements Bouton {
 
     public void onDecClick() {
         clavier.press(4);
-    }
+    }*/
 }

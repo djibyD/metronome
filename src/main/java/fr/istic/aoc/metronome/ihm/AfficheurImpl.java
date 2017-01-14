@@ -1,12 +1,17 @@
 package fr.istic.aoc.metronome.ihm;
 
+import fr.istic.aoc.metronome.controller.FXController;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+
 /**
  * Created by djiby on 08/01/17.
  */
 public class AfficheurImpl implements Afficheur {
 
-    public AfficheurImpl(){
+    private FXController fxController;
 
+    public AfficheurImpl(){
     }
 
     @Override
@@ -15,7 +20,7 @@ public class AfficheurImpl implements Afficheur {
     }
 
     @Override
-    public void éteindreLED(int numLED) {
+    public void eteindreLED(int numLED) {
 
     }
 
