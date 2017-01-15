@@ -12,8 +12,4 @@ public interface Afficheur {
     void flashLedB() ;
     void afficherTempo(int valeurTempo) ;
     void afficherMesure(int valeurTempo) ;
-    //public void flash();
-
-    /*public void marquerTemps();
-    public void marquerMesure();*/
 }

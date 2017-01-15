@@ -14,12 +14,10 @@ public class Clock implements Horloge{
     private ScheduledExecutorService scheduler;
 
     public Clock() {
-        //System.out.println("Creation de l horloge!");
     }
 
     @Override
     public void activerPeriodiquement(Command command, long period) {
-       // System.out.println("activeeeee");
         if (scheduler != null) {
             this.stop();
         }
@@ -29,7 +27,6 @@ public class Clock implements Horloge{
 
     @Override
     public void activerApresDelai(Command command, long delai) {
-       // System.out.println("je vais regarde rds le moteur");
         scheduler = Executors.newScheduledThreadPool(1);
         scheduler.scheduleWithFixedDelay(() -> command.execute(), 0L, delai, TimeUnit.MILLISECONDS);
     }

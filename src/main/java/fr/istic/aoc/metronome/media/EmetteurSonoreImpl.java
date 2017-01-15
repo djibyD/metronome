@@ -17,7 +17,6 @@ public class EmetteurSonoreImpl implements EmetteurSonore{
 
     @Override
     public void emettreClic() {
-        //System.out.println("emettre click!");
 
         String url = "file:./src/main/resources/beep.wav";
 

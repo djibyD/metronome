@@ -29,10 +29,7 @@ public class Main extends Application {
         });
         primaryStage.show();
 
-       // IController controller = new ControllerImpl();
         FXController fxcontroller = loader.getController();
-        /*Clavier clavier = new ClavierImpl(fxcontroller, controller);
-        Afficheur afficheur = new AfficheurImpl(fxcontroller, controller);*/
 
     }
     public static void main(String[] args) {

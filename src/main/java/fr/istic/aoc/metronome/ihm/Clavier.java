@@ -7,6 +7,4 @@ public interface Clavier {
 
     int touchePressee() ;
     void press(int i);
-
-    //void getTouche();
 }

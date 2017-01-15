@@ -25,8 +25,6 @@ public class ClavierImpl implements Clavier {
         clock.activerPeriodiquement(() -> {
             afterStartClicked();
         }, 100);
-        // }).start();
-
     }
 
     @Override

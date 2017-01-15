@@ -32,20 +32,6 @@ public interface IController {
 
     void onDecClick();
 
-    /*void setLedA(Circle ledA);
-
-    void setLedB(Circle ledB);
-
-    void setSlider(Slider slider);
-
-    void setLabelTempo(TextField labelTempo);
-
-    void setLabelMesure(TextField labelMesure);
-
-    void setIncButton(Button incButton);
-
-    void setDecButton(Button decButton);*/
-
     void setTempo(int newTempo); //Pour mettre le jour le tempo du moteur
 
     //Pattern command entre Controller et Adapteur(s)
@@ -53,9 +39,10 @@ public interface IController {
     void setMarqeurTempCmd(Command marqeurTempCmd);
     void setMarquerMesureCmd(Command marquerMesureCmd);
     void setTempoUpdateCmd(Command tempoUpdateCmd);
+    void setMesureUpdateCmd(Command mesureUpdateCmd);
 
 
     //Transmission donne(tempo) du moteur vers le materiel
     int getTempoMateriel();
-
+    int getMesureMateriel();
 }

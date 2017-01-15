@@ -79,27 +79,16 @@ public class Moteur implements IMoteur {
         if (isStarted) {//Metronome etait deja entrain de tourner
             clock.stop();
             isStarted = false;
-           // System.out.println("start : " + isStarted);
         }
         isStarted = true;
-        // new Thread(() -> {
         clock = new Clock();
-       // System.out.println("start : " + isStarted);
         clock.activerPeriodiquement(() -> {
-                   // System.out.println("Bonjour");
-                    //if (isStarted) {
                     if (compteurMesure == (mesure - 1)) {
                         marquerMesure();
-                      //  System.out.println("temps");
                     }
                     marquerTemps();
-                    //System.out.println("mesure");
-                    // }
-
                 },
                 (60000 / this.getTempo()));
-       // System.out.println("iiiiiiiiiiiiiiii");
-        //  }).start();
         startCommand.execute();
     }
 
@@ -115,14 +104,12 @@ public class Moteur implements IMoteur {
 
     @Override
     public void marquerTemps() {
-       //System.out.println("temps");
         compteurMesure++;
         marquerTempsCommand.execute();
     }
 
     @Override
     public void marquerMesure() {
-       // System.out.println("mesure");
         compteurMesure = -1;
         marquerMesureCommand.execute();
     }

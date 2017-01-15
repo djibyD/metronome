@@ -25,18 +25,19 @@ public class AfficheurImpl implements Afficheur {
         controller.setTempoUpdateCmd(() -> {
             afficherTempo(controller.getTempoMateriel());
         });
+        controller.setMesureUpdateCmd(() -> {
+            afficherMesure(controller.getMesureMateriel());
+        });
     }
 
     @Override
     public void flashLedA() {
         fxController.flashLedA();
-
     }
 
     @Override
     public void flashLedB() {
         fxController.flashLedB();
-
     }
 
     @Override
@@ -46,7 +47,7 @@ public class AfficheurImpl implements Afficheur {
 
     @Override
     public void afficherMesure(int valeurTempo) {
-
+        fxController.afficherMesure(valeurTempo);
     }
 
     private void flash(Circle led, Color on, Color off) {
